@@ -7,7 +7,8 @@ public class MrCube : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
-        // not complete yet
+        transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime); 
+        float moveX = Input.GetAxis("Horizontal"); // get left/right input
+        transform.Translate(Vector3.right * moveX * horizontalSpeed * Time.deltaTime); // move left/right
     }
 }
